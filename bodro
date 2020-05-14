@@ -1,0 +1,34 @@
+Dim x As Integer
+
+Function crate(minstr, maxstr)
+ 
+    For i = 1 To 3 Step 2
+        For j = minstr To maxstr
+        x = x + 1
+        If x < 10 Then
+        Cells(j, i).Value = "202000000" & x
+        ElseIf x < 100 Then
+         Cells(j, i).Value = "20200000" & x
+          ElseIf x < 1000 Then
+         Cells(j, i).Value = "2020000" & x
+          ElseIf x < 10000 Then
+         Cells(j, i).Value = "202000" & x
+          ElseIf x < 100000 Then
+         Cells(j, i).Value = "20200" & x
+         Else
+         Cells(j, i).Value = "2020" & x
+        End If
+        Next j
+    Next i
+    
+End Function
+
+
+Sub Run()
+   x = 0
+   For u = 1 To 300 Step 50
+    write= crate(u, u + 49)
+   Next u
+
+End Sub
+

@@ -25,10 +25,11 @@ End Function
 
 
 Sub Run()
+   'x değişken değeri başlangıcı belirler 
    x = 0
    For u = 1 To 300 Step 50
-    write= crate(u, u + 49)
+    Call crate(u, u + 49)
    Next u
-
+'her sayfada 99 tane bodro olur 1 -99 , 100-199
 End Sub
 
